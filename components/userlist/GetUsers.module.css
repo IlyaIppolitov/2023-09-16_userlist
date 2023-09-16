@@ -1,0 +1,19 @@
+
+.container {
+  background: #45a6c4;
+  font-family: 'Open Sans', sans-serif;
+}
+.container table {
+  background: #1b728f;
+  border-radius: 0.25em;
+  border-collapse: collapse;
+  margin: 1em;
+}
+.container table tr th {
+  border-bottom: 1px solid #364043;
+  color: #E2B842;
+  font-size: 0.85em;
+  font-weight: 600;
+  padding: 0.5em 1em;
+  text-align: left;
+}

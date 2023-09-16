@@ -3,7 +3,7 @@ import styles from './Header.module.css'
 
 const pages = [
     {href: '/', name: 'Home'},
-    {href: '/imdb', name: 'IMDB'}
+    {href: '/userlist', name: 'UserList'}
 ]
 
 export function Header() {
