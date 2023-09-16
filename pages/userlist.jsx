@@ -1,9 +1,9 @@
-import UserListPage from "../components/userlist/index";
+import UserListApp from "../components/userlist/index";
 
 export default function UserList() {
     return (
         <>
-          <UserListPage />
+          <UserListApp />
         </>
     )
   }
