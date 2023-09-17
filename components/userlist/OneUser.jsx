@@ -3,17 +3,26 @@ import { memo } from 'react';
 
 export function createUser(newName) {
   const user = {
-    id:Math.random(), 
-    name : newName,
-    username : "newUserName",
-    email : "newEmail",
-    address: { street : "newStreet", suite : "newSuite", city : "newCity", zipcode : "newZipcode", geo: { lat:"123", lng:"123" } },
-    phone : "newPhone",
-    website : "newwebsite",
+    id:Math.random(),
+    name: {newName},
+    username: "Moriah.Stanton",
+    email: "Rey.Padberg@karina.biz",
+    address: {
+      street: "Kattie Turnpike",
+      suite: "Suite 198",
+      city: "Lebsackbury",
+      zipcode: "31428-2261",
+      geo: {
+        lat: "-38.2386",
+        lng: "57.2232"
+      }
+    },
+    phone: "024-648-3804",
+    website: "ambrose.net",
     company: {
-      name: "newCompanyName",
-      catchPhrase: "newCatchPhrase",
-      bs:"newBs"
+      name: "Hoeger LLC",
+      catchPhrase: "Centralized empowering task-force",
+      bs: "target end-to-end models"
     }
   }
   
