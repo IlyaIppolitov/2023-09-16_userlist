@@ -1,10 +1,10 @@
 import styles from './OneUser.module.css'
 import { memo } from 'react';
 
-export function createUser(newName) {
+export function createUser(name) {
   const user = {
     id:Math.random(),
-    name: {newName},
+    name,
     username: "Moriah.Stanton",
     email: "Rey.Padberg@karina.biz",
     address: {
@@ -26,7 +26,7 @@ export function createUser(newName) {
     }
   }
   
-  return {id: user.id, user};
+  return user;
 }
 
 export default memo(function OneUser({ user, delUser }) {
