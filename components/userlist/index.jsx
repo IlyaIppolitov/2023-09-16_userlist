@@ -8,14 +8,28 @@ export default function UserListApp() {
   const
     [list, setList] = useState([]),
     [error, setError] = useState(null),
-    addUser = useCallback(newName => setList(old => old.concat(createUser(newName))), []),
-    delUser = useCallback(id => setList(old => old.filter(user => id !== user.id)), []),
+    API_URL = 'http://localhost:3333/users/',
+    addUser = useCallback(newName => {
+      const newUser = createUser(newName);
+      setList(old => old.concat(newUser));
+      fetch(API_URL,
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(newUser)
+        });
+    }, []),
+    delUser = useCallback(id => {
+      setList(old => old.filter(user => id !== user.id));
+      fetch(API_URL + id, { method: 'DELETE' });
+    }, []),
     ref = useRef([]),
+    promise = fetch(API_URL),
     onClick = async () => {
         async function f() {
           try {
             const
-              response = await fetch('https://jsonplaceholder.typicode.com/users/');
+              response = await promise;
             if (!response.ok) throw new Error('fetch ' + response.status);
             setList(await response.json());
             console.debug(list);

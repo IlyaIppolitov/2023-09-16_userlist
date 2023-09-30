@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "serv": "json-server --watch db.json --port 3333"
   },
   "dependencies": {
     "@types/node": "20.6.2",
